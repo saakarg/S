@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$cyan: #2ab2af;
+$brightYellow: #c0df34;
+$lightGray: #e5eff5;
+$grayishBlue: #98a6bd;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  font-size: 16px;
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+  background-color: $lightGray;
+  color: $lightGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  margin-bottom: 1rem;
+}
+.page_container {
+  padding: 4.5rem 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .content_container {
+    border-radius: 5px;
+    box-shadow: 0 4px 26px #00000028;
+    overflow: hidden;
+
+    .top_container,
+    .mid_container,
+    .bottom_container {
+      padding: 2rem 1.5rem;
+    }
+
+    .top_container {
+      background-color: #ffffff;
+
+      .top_heading {
+        color: $cyan;
+      }
+
+      h4 {
+        color: $brightYellow;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        line-height: 2rem;
+        color: $grayishBlue;
+        max-width: 570px;
+      }
+    }
+    .mid_container {
+      background-color: $cyan;
+
+      .price {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+
+        h2 {
+          font-size: 2.15rem;
+        }
+
+        .pm {
+          color: rgba($color: $lightGray, $alpha: 0.5);
+        }
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      .signup_btn {
+        width: 100%;
+        padding: 1rem;
+        background-color: $brightYellow;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        color: $lightGray;
+        font-size: 1.05rem;
+        box-shadow: 0 4px 16px #00000026;
+      }
+    }
+    .bottom_container {
+      background-color: #4abebd;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          margin-bottom: 0.25rem;
+          color: rgba($color: $lightGray, $alpha: 0.7);
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .container .content_container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "top top"
+      "mid bottom";
+
+    .top_container,
+    .mid_container,
+    .bottom_container {
+      padding: 4rem 3rem;
+    }
+
+    .top_container {
+      grid-area: top;
+    }
+
+    .mid_container {
+      grid-area: mid;
+    }
+
+    .bottom_container {
+      grid-area: bottom;
+    }
+  }
+}
