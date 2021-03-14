@@ -73,7 +73,7 @@ body {
   background-color: #2ab2af;
 }
 
-.container .content_container .mid_container .price {
+.container .content_container .mid_container .price p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,15 +83,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.container .content_container .mid_container .price h2 {
+.container .content_container .mid_container .price p .price_highlight {
   font-size: 2.15rem;
+  margin-right: 0.725rem;
 }
 
-.container .content_container .mid_container .price .pm {
+.container .content_container .mid_container .price p .pm {
   color: rgba(229, 239, 245, 0.5);
 }
 
@@ -101,7 +101,17 @@ body {
 
 .container .content_container .mid_container .signup_btn {
   width: 100%;
+  text-decoration: none;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #c0df34;
   border-radius: 5px;
   outline: none;
@@ -139,7 +149,7 @@ body {
   .container .content_container .top_container,
   .container .content_container .mid_container,
   .container .content_container .bottom_container {
-    padding: 4rem 3rem;
+    padding: 2.5rem 3rem;
   }
   .container .content_container .top_container {
     -ms-grid-row: 1;

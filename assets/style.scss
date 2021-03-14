@@ -65,15 +65,15 @@ body {
     .mid_container {
       background-color: $cyan;
 
-      .price {
+      .price p {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 1rem;
         margin-bottom: 0.5rem;
 
-        h2 {
+        .price_highlight {
           font-size: 2.15rem;
+          margin-right: 0.725rem;
         }
 
         .pm {
@@ -87,7 +87,11 @@ body {
 
       .signup_btn {
         width: 100%;
+        text-decoration: none;
         padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $brightYellow;
         border-radius: 5px;
         outline: none;
@@ -125,7 +129,7 @@ body {
     .top_container,
     .mid_container,
     .bottom_container {
-      padding: 4rem 3rem;
+      padding: 2.5rem 3rem;
     }
 
     .top_container {
